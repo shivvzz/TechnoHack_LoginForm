@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Login </title>
+	<style>
+		body
+		{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-family: sans-serif;
+			line-height: 1.5;
+			min-height: 100vh;
+			background: #f3f3f3;
+			flex-direction: column;
+			margin: 0;
+		}
+
+		.main
+		{
+			background-color: black;
+			border-radius: 15px;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+			padding: 10px 20px;
+			transition: transform 0.2s;
+			width: 500px;
+			text-align: center;
+			color: white;
+		}
+
+		h1 
+		{
+			color: #1390d8;
+		}
+
+		label 
+		{
+			display: block;
+			width: 100%;
+			margin-top: 10px;
+			margin-bottom: 5px;
+			text-align: left;
+			color: #1390d8;
+			font-weight: bold;
+		}
+
+		input 
+		{
+			display: block;
+			width: 100%;
+			margin-bottom: 15px;
+			padding: 10px;
+			box-sizing: border-box;
+			border: 1px solid #17aae4;
+			border-radius: 5px;
+		}
+
+		input[type="submit"]
+		{
+			padding: 15px;
+			border-radius: 10px;
+			margin-top: 15px;
+			margin-bottom: 15px;
+			border: none;
+			color: white;
+			cursor: pointer;
+			background-color: #21e227;
+			width: 100%;
+			font-size: 16px;
+		}
+		input[type="submit"]:hover
+		{
+			background-color: #09540b;
+		}
+
+	</style>
+		
+</head>
+
+<body>
+	<div class="main">
+		<h1>Student Portal </h1>
+		<h3>Enter your login credentials</h3>
+		<form id="login">
+			<label for="name"> Name: </label>
+			<input type="text" id="name" name="name" placeholder="Enter your Full Name" required>
+
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password" placeholder="Enter your Password" required>
+
+			<input type="submit" value="Submit">
+			
+		</form>
+		<p>Not registered? 
+			<a href="registration.html" style="text-decoration: underline;">Create an account</a>
+		</p>
+	</div>
+	<script>
+		document.getElementById("login").addEventListener("submit", function(event)
+		{
+			event.preventDefault();
+			var name = document.getElementById("name").value;
+			var pass = document.getElementById("password").value;
+
+			if (name === "Shivani" && pass === "bca")
+			{
+				alert("Login Successfull");
+			}
+			else
+			{
+				alert("Invalid Name or Password");
+			}
+		});
+	</script>
+</body>
+
+
+</html>
